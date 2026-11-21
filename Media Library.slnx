@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Media Library.vcxproj" />
+  <Project Path="Media Library.vcxproj" Id="43e73cfe-39f8-4365-9a32-21754189809e" />
 </Solution>

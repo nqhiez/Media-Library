@@ -2,7 +2,12 @@
 #include <iostream>
 using namespace std;
 bool MediaItem::operator==(const MediaItem& item) const {
-	// hong biet so sanh ntn, xiu hoi mn roi update nhe!
+	if (id == item.id && this->getType() == item.getType()) { 
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 ostream& operator<<(ostream& os, const MediaItem& item) {
 	item.displayInfo();
