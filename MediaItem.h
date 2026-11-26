@@ -7,14 +7,18 @@ protected:
 	bool isAvailable; // Trang thai item( co san = true | dang muon = false)
 	friend std::ostream& operator<<(std::ostream& os, const MediaItem& item);
 public:
-	MediaItem(std::string id, std::string name, bool isAvailable) : id(id), name(name), isAvailable(isAvailable) {} // Them item chung vao thu vien (phai khai bao cac thuoc tinh khac cua item vo nua nhe, con khai bao ntn thi viet trong file class con)
+	MediaItem(std::string id, std::string name, bool isAvailable = true) : id(id), name(name), isAvailable(isAvailable) {} // Them item chung vao thu vien (phai khai bao cac thuoc tinh khac cua item vo nua nhe, con khai bao ntn thi viet trong file class con)
 	std::string getId() const { return id; }
 	std::string getName() const { return name; }
 	bool getStatus() const { return isAvailable; }
 	void setStatus(bool available) { isAvailable = available; }
-	virtual void displayInfo() const = 0; // Ham hien thi thong tin cua item (phai khai bao trong file class con)
+	void checkOut(); // Ham muon item															
+	void checkIn(); // Ham tra item 
+	double calculateLateFee(int Latedays); // Ham tinh phi tre han cua item 
+	virtual void displayInfo() const = 0; // Ham hien thi thong tin cua item
+	virtual void clone() = 0; // Ham clone item
 	virtual ~MediaItem() = default; // ham huy 
-	virtual std::string getType() const = 0; // Ham tra ve type(Book,DVD,AudioTrack) item (phai khai bao trong file class con)
+	virtual std::string getType() const = 0; // Ham tra ve type(Book,DVD,AudioTrack) item 
 	bool operator==(const MediaItem& item) const;
 };
 /* Class MediaItem - la class cha cho cac loai item trong thu vien
