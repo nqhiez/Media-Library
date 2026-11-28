@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 bool MediaItem::operator==(const MediaItem& item) const {   // so sanh == 
-	if (this->getType() == item.getType() && this->name == item.name) { // so sanh type va name cua item??? 
+	if (this->getType() == item.getType() && this->name == item.name && this->id == item.id ) { // so sanh type, id va name cua item??? 
 		return true;
 	}
 	else {

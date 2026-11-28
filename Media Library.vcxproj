@@ -142,7 +142,6 @@
     <ClCompile Include="AudioTrack.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="DVD.cpp" />
-    <ClCompile Include="FileManager.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MediaItem.cpp" />
@@ -151,7 +150,6 @@
     <ClInclude Include="AudioTrack.h" />
     <ClInclude Include="Book.h" />
     <ClInclude Include="DVD.h" />
-    <ClInclude Include="FileManager.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="MediaItem.h" />
   </ItemGroup>
